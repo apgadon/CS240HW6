@@ -1,0 +1,10 @@
+CS 240 HW 6 Report
+
+STRATEGY:
+For add, our method first checks if the bucket is empty, then if not iterates through the list and overwrites a 
+Node or saves to the end depending on if there was a duplicate key. We put the check for an empty index before
+the iteration through any hypothetical LinkedList to avoid any nullPointer exceptions.
+
+Most of the problems we ran into had to do with nullPointers-- namely, attempting to access null objects in order
+to initialize them (eg using .setValue()). To get around this, we created a TableNode toInsert that any null object
+could be set to, easily initializing the object without breaching access to said null object.
