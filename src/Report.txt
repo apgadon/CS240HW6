@@ -3,8 +3,16 @@ CS 240 HW 6 Report
 STRATEGY:
 For add, our method first checks if the bucket is empty, then if not iterates through the list and overwrites a 
 Node or saves to the end depending on if there was a duplicate key. We put the check for an empty index before
-the iteration through any hypothetical LinkedList to avoid any nullPointer exceptions.
+the iteration through any hypothetical LinkedList to avoid any nullPointer exceptions. Our remove functions 
+similarly, by checking the index first as a separate conditional, then iterating through the list to find the
+desired Node.
 
 Most of the problems we ran into had to do with nullPointers-- namely, attempting to access null objects in order
 to initialize them (eg using .setValue()). To get around this, we created a TableNode toInsert that any null object
 could be set to, easily initializing the object without breaching access to said null object.
+
+CONCEPTS:
+Through making this project we gained a deeper understanding of hash tables, even if the only edited methods were 
+add and remove, they make up the bulk of a hash table's functionality. It was also an opportunity to recognize 
+the interplay between storing a group of objects into both an array (for the first Node) and a linked list (for the rest). 
+It was also an opportunity to better visualize accessibility within arrays and linked lists (and, by extension, hash tables).
